@@ -70,7 +70,7 @@ const ToDo = () => {
                     <li>No tasks available</li>
                 ) : (
                     currentTasks.map((t, index) => (
-                        <li key={indexOfFirstTask + index}>
+                        <li key={ index}>
                             <span
                                 className={t.completed ? 'completed' : ''}
                                 style={{
@@ -79,9 +79,9 @@ const ToDo = () => {
                             >
                                 {t.text}
                             </span>
-                            <button onClick={() => handleEditTask(indexOfFirstTask + index)}>Edit</button>
-                            <button onClick={() => handleDeleteTask(indexOfFirstTask + index)}>Delete</button>
-                            <button onClick={() => handleToggleComplete(indexOfFirstTask + index)}>
+                            <button onClick={() => handleEditTask( index)}>Edit</button>
+                            <button onClick={() => handleDeleteTask( index)}>Delete</button>
+                            <button onClick={() => handleToggleComplete( index)}>
                                 {t.completed ? 'Undo' : 'Complete'}
                             </button>
                         </li>
